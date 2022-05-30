@@ -2,7 +2,7 @@ import './ExpenseItem.css'
 import ExpenseDate from "./ExpenseDate";
 const ExpenseItem = (props) => {
 const eventHandler = () => {
-    console.log('Clicked!!!')
+    console.log(props)
 }
     return (
         <div className="expense-item">
