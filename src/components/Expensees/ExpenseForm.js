@@ -5,41 +5,14 @@ const ExpenseForm = (props) => {
     const [enteredAmount,setEnteredAmount] = useState('');
     const [enteredDate,setEnteredDate] = useState('');
     const titleChangeHandler = (e) => {
-        // setUserInput({
-        //     ...userInput,
-        //     enteredTitle: e.target.value
-        // });
-        // setUserInput((prevState) =>{
-        //     return {...prevState, enteredTitle: e.target.value};
-        // })
         setEnteredTitle(e.target.value);
     }
     const amountChangeHandler = (e) => {
-        // setUserInput({
-        //     ...userInput,
-        //     enteredTitle: e.target.value
-        // });
-        // setUserInput((prevState) =>{
-        //     return {...prevState, enteredTitle: e.target.value};
-        // })
         setEnteredAmount(e.target.value);
     }
     const dateChangeHandler = (e) => {
-        // setUserInput({
-        //     ...userInput,
-        //     enteredTitle: e.target.value
-        // });
-        // setUserInput((prevState) =>{
-        //     return {...prevState, enteredTitle: e.target.value};
-        // })
         setEnteredDate(e.target.value);
     }
-    // const [userInput,setUserInput] = useState({
-    //     enteredTitle:'',
-    //     enteredAmount:'',
-    //     enteredDate:''
-    // })
-
     const submitHandler = (e) => {
         e.preventDefault();
         const expenseData = {
@@ -50,7 +23,6 @@ const ExpenseForm = (props) => {
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
-        // console.log(expenseData)
         props.onSaveExpenseData(expenseData);
     }
     return (

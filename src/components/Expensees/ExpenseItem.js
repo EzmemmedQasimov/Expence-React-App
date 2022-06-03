@@ -1,9 +1,6 @@
 import './ExpenseItem.css'
 import ExpenseDate from "./ExpenseDate";
 const ExpenseItem = (props) => {
-const eventHandler = () => {
-    console.log(props)
-}
     return (
         <div className="expense-item">
             <ExpenseDate date={props.date}/>
@@ -11,7 +8,6 @@ const eventHandler = () => {
                 <h2>{props.title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
             </div>
-            <button onClick={eventHandler}>Click me</button>
         </div>
     );
 }
